@@ -1,12 +1,8 @@
 import { Calendar, MapPin, Shield } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
-  const scrollToRegister = () => {
-    const element = document.getElementById('register');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16">
@@ -41,7 +37,7 @@ export default function Hero() {
         </div>
 
         <button
-          onClick={scrollToRegister}
+          onClick={() => navigate('/register')}
           className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition shadow-lg shadow-cyan-500/50"
         >
           Register Now

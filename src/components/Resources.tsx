@@ -3,9 +3,9 @@ import { BookOpen, CheckSquare, ExternalLink } from 'lucide-react';
 export default function Resources() {
   const resources = [
     {
-      title: 'National Cyber Security Centre',
-      description: 'UK government advice and support for cybersecurity',
-      url: 'https://www.ncsc.gov.uk/',
+      title: 'Ghana Cyber Security Authority',
+      description: 'Official cybersecurity guidance and resources from Ghana\'s national authority',
+      url: 'https://csa.gov.gh/',
     },
     {
       title: 'Stay Safe Online',

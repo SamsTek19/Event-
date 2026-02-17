@@ -1,16 +1,9 @@
 import { Shield, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20">
@@ -22,12 +15,24 @@ export default function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-300 hover:text-cyan-400 transition">Home</button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-cyan-400 transition">About</button>
-            <button onClick={() => scrollToSection('details')} className="text-gray-300 hover:text-cyan-400 transition">Event Details</button>
-            <button onClick={() => scrollToSection('team')} className="text-gray-300 hover:text-cyan-400 transition">Team</button>
-            <button onClick={() => scrollToSection('schedule')} className="text-gray-300 hover:text-cyan-400 transition">Schedule</button>
-            <button onClick={() => scrollToSection('register')} className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition">Register Now</button>
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition">
+              About
+            </Link>
+            <Link to="/event-details" className="text-gray-300 hover:text-cyan-400 transition">
+              Event Details
+            </Link>
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition">
+              Team
+            </Link>
+            <Link
+              to="/register"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition"
+            >
+              Register Now
+            </Link>
           </div>
 
           <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -37,12 +42,41 @@ export default function Navigation() {
 
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2">
-            <button onClick={() => scrollToSection('home')} className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2">Home</button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2">About</button>
-            <button onClick={() => scrollToSection('details')} className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2">Event Details</button>
-            <button onClick={() => scrollToSection('team')} className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2">Team</button>
-            <button onClick={() => scrollToSection('schedule')} className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2">Schedule</button>
-            <button onClick={() => scrollToSection('register')} className="block w-full text-left bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg mt-2">Register Now</button>
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2"
+            >
+              About
+            </Link>
+            <Link
+              to="/event-details"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2"
+            >
+              Event Details
+            </Link>
+            <Link
+              to="/team"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left text-gray-300 hover:text-cyan-400 py-2"
+            >
+              Team
+            </Link>
+            <Link
+              to="/register"
+              onClick={() => setIsMenuOpen(false)}
+              className="block w-full text-left bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg mt-2"
+            >
+              Register Now
+            </Link>
           </div>
         )}
       </div>

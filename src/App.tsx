@@ -1,32 +1,21 @@
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import About from './components/About';
-import EventDetails from './components/EventDetails';
-import Methodology from './components/Methodology';
-import Team from './components/Team';
-import WhyAttend from './components/WhyAttend';
-import Schedule from './components/Schedule';
-import Registration from './components/Registration';
-import Resources from './components/Resources';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import EventDetailsPage from './pages/EventDetailsPage';
+import TeamPage from './pages/TeamPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900">
-      <Navigation />
-      <Hero />
-      <About />
-      <EventDetails />
-      <Methodology />
-      <Team />
-      <WhyAttend />
-      <Schedule />
-      <Registration />
-      <Resources />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/event-details" element={<EventDetailsPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
