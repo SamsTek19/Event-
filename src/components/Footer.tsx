@@ -1,4 +1,5 @@
 import { Shield, Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,24 +33,24 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-cyan-400 transition">
+                <Link to="/about" className="text-gray-400 hover:text-cyan-400 transition">
                   About
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-cyan-400 transition">
+                <Link to="/team" className="text-gray-400 hover:text-cyan-400 transition">
                   Team
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => document.getElementById('schedule')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-cyan-400 transition">
+                <Link to="/" className="text-gray-400 hover:text-cyan-400 transition">
                   Schedule
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-cyan-400 transition">
+                <Link to="/register" className="text-gray-400 hover:text-cyan-400 transition">
                   Register
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

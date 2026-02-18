@@ -4,10 +4,12 @@ import AboutPage from './pages/AboutPage';
 import EventDetailsPage from './pages/EventDetailsPage';
 import TeamPage from './pages/TeamPage';
 import RegisterPage from './pages/RegisterPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
