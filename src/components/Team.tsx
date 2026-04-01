@@ -73,6 +73,9 @@ export default function Team() {
       challenge: 'Email Security',
       description: 'Phish or Legit?',
       icon: Mail,
+      linkedin:
+        'https://www.linkedin.com/posts/ebenezer-quarshie-9554702b0_cybersecurity-emailsecurity-phishingawareness-activity-7444887867509780480-4wPT?utm_medium=ios_app&rcm=ACoAAErRrFEB6R7eXGwvDvW4peoQwsNJBKv2Hkg&utm_source=social_share_send&utm_campaign=copy_link',
+      youtube: 'https://youtu.be/Knb7ou7NbHQ?feature=shared',
     },
     {
       name: 'Nlenkiba Carlos Nkoten',
