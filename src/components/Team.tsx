@@ -1,7 +1,33 @@
-import { Lock, Share2, Globe, Mail, Cloud, CreditCard, Server, Smartphone, Eye, HardDrive, Crown } from 'lucide-react';
+import {
+  Lock,
+  Share2,
+  Globe,
+  Mail,
+  Cloud,
+  CreditCard,
+  Server,
+  Smartphone,
+  Eye,
+  HardDrive,
+  Crown,
+  Linkedin,
+  Youtube,
+} from 'lucide-react';
+import type { ComponentType } from 'react';
+
+type TeamMember = {
+  name: string;
+  role: string;
+  challenge: string;
+  description: string;
+  icon: ComponentType<{ className?: string }>;
+  isLeader?: boolean;
+  linkedin?: string;
+  youtube?: string;
+};
 
 export default function Team() {
-  const team = [
+  const team: TeamMember[] = [
     {
       name: 'Gbadago Ishmael',
       role: 'Group Leader',
@@ -9,6 +35,9 @@ export default function Team() {
       description: 'Public or Private Data?',
       icon: Cloud,
       isLeader: true,
+      linkedin:
+        'https://www.linkedin.com/posts/ishmael-gbadago-4971532b9_cybersecurity-digitalhygiene-cloudsecurity-ugcPost-7444878582922924032-xD7M?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAExfx_MBxi8y9gqWZrOJCuU1Xx-swAdqBeE',
+      youtube: 'https://youtu.be/47Mql8-9-ig',
     },
     {
       name: 'Samuel Sarfo Agyei',
@@ -23,6 +52,9 @@ export default function Team() {
       challenge: 'Safe Social Media',
       description: 'Overshare or Secure?',
       icon: Share2,
+      linkedin:
+        'https://www.linkedin.com/posts/zipporah-donkor-1728903bb_cybersecurity-digitalhygiene-socialmediasafety-activity-7444879608673443841-UMGH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGZ3qeYBNY5_fDuKmPgmekwZcmSlB-29TFc',
+      youtube: 'https://youtu.be/ilj0NT3cFJQ',
     },
     {
       name: 'Adu Paul',
@@ -44,6 +76,9 @@ export default function Team() {
       challenge: 'Online Financial Safety',
       description: 'Scam or Safe Transaction?',
       icon: CreditCard,
+      linkedin:
+        'https://www.linkedin.com/posts/carlos-nkoten-72073b349_cybersecurity-onlinesafety-financialsecurity-activity-7444874539462803456-ADer?utm_source=share&utm_medium=member_ios&rcm=ACoAAFcj5UgB7Mi487JLqzBkw2BHTnffRZTokLM',
+      youtube: 'https://youtu.be/24jBKGSkGRQ?si=xkXmLb3bf24XR03W',
     },
     {
       name: 'Joshua Okyere',
@@ -58,6 +93,9 @@ export default function Team() {
       challenge: 'Mobile Security',
       description: 'App Permission Trap',
       icon: Smartphone,
+      linkedin:
+        'https://www.linkedin.com/posts/michael-nugbley-282676310_would-you-give-a-flashlight-app-your-bank-ugcPost-7444862892593545217-mDnF?utm_source=share&utm_medium=member_android&rcm=ACoAAE8e6QIBLu73ygV1j7DK-l-MauFMQXr9B98',
+      youtube: 'https://youtu.be/HgDN30mfdOg?si=Dh1gkSdVZTiC6Ssr',
     },
     {
       name: 'Patrick Azise-Ere',
@@ -114,7 +152,35 @@ export default function Team() {
                 </p>
                 <div className="border-t border-slate-700 pt-4">
                   <p className="text-white font-semibold mb-1">{member.challenge}</p>
-                  <p className="text-gray-400 text-sm">{member.description}</p>
+                  <p className="text-gray-400 text-sm mb-3">{member.description}</p>
+                  {(member.linkedin || member.youtube) && (
+                    <div className="flex flex-wrap gap-2">
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-md bg-slate-700/80 px-2.5 py-1.5 text-xs font-medium text-cyan-300 transition hover:bg-slate-600 hover:text-white"
+                          aria-label={`${member.name} on LinkedIn`}
+                        >
+                          <Linkedin className="h-4 w-4 shrink-0" />
+                          LinkedIn
+                        </a>
+                      )}
+                      {member.youtube && (
+                        <a
+                          href={member.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-md bg-slate-700/80 px-2.5 py-1.5 text-xs font-medium text-red-300 transition hover:bg-slate-600 hover:text-white"
+                          aria-label={`${member.name} on YouTube`}
+                        >
+                          <Youtube className="h-4 w-4 shrink-0" />
+                          YouTube
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             );
