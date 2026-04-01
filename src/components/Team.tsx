@@ -93,6 +93,9 @@ export default function Team() {
       challenge: 'Device & Software Security',
       description: 'Secure the Device',
       icon: Server,
+      linkedin:
+        'https://www.linkedin.com/posts/joshua-okyere-0671b930a_cybersecurity-digitalhygiene-informationsecurity-activity-7444886758548291584-8xMs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6yJA8B-PQhUG75T72lBnq7-HxpgtzDxug',
+      youtube: 'https://youtu.be/PunpdINg7vc',
     },
     {
       name: 'Michael Nugbley Esoun',
