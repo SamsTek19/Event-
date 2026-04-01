@@ -1,4 +1,5 @@
-import { Shield, Menu, X } from 'lucide-react';
+import { Shield, Menu, X, Video } from 'lucide-react';
+import { FULL_EVENT_VIDEO_URL } from '../constants/eventLinks';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -27,6 +28,15 @@ export default function Navigation() {
             <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition">
               Team
             </Link>
+            <a
+              href={FULL_EVENT_VIDEO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-cyan-400 font-medium hover:text-cyan-300 transition"
+            >
+              <Video className="w-4 h-4" />
+              Event video
+            </a>
             <Link
               to="/register"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition"
@@ -70,6 +80,16 @@ export default function Navigation() {
             >
               Team
             </Link>
+            <a
+              href={FULL_EVENT_VIDEO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center gap-2 w-full text-left text-cyan-400 font-medium py-2"
+            >
+              <Video className="w-4 h-4 shrink-0" />
+              Event video
+            </a>
             <Link
               to="/register"
               onClick={() => setIsMenuOpen(false)}

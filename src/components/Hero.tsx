@@ -1,5 +1,6 @@
-import { Calendar, MapPin, Shield } from 'lucide-react';
+import { Calendar, MapPin, Shield, Video } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { FULL_EVENT_VIDEO_URL } from '../constants/eventLinks';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -36,12 +37,24 @@ export default function Hero() {
           </div>
         </div>
 
-        <button
-          onClick={() => navigate('/register')}
-          className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition shadow-lg shadow-cyan-500/50"
-        >
-          Register Now
-        </button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button
+            type="button"
+            onClick={() => navigate('/register')}
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition shadow-lg shadow-cyan-500/50 w-full sm:w-auto"
+          >
+            Register Now
+          </button>
+          <a
+            href={FULL_EVENT_VIDEO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 border-2 border-cyan-400/80 text-cyan-300 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500/10 hover:border-cyan-300 transition w-full sm:w-auto"
+          >
+            <Video className="w-5 h-5 shrink-0" />
+            Watch full event video
+          </a>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-cyan-500/20">

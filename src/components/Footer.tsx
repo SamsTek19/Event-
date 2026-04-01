@@ -1,5 +1,6 @@
-import { Shield, Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Shield, Mail, Twitter, Linkedin, Github, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FULL_EVENT_VIDEO_URL } from '../constants/eventLinks';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -51,6 +52,17 @@ export default function Footer() {
                 <Link to="/register" className="text-gray-400 hover:text-cyan-400 transition">
                   Register
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={FULL_EVENT_VIDEO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition inline-flex items-center gap-1.5"
+                >
+                  <Video className="w-4 h-4 shrink-0" />
+                  Full event video
+                </a>
               </li>
             </ul>
           </div>
