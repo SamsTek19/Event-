@@ -45,6 +45,9 @@ export default function Team() {
       challenge: 'Password Management',
       description: 'Build or Break the Password',
       icon: Lock,
+      linkedin:
+        'https://www.linkedin.com/in/samuel-sarfo-3a0b952b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      youtube: 'https://youtu.be/BcqxVTbKE6I',
     },
     {
       name: 'Zipporah Donkor',
@@ -62,6 +65,7 @@ export default function Team() {
       challenge: 'Safe Browsing',
       description: 'Click or Skip?',
       icon: Globe,
+      youtube: 'https://youtu.be/hsOlbPUUGUQ',
     },
     {
       name: 'Ebenezer Quarshie',
@@ -110,6 +114,9 @@ export default function Team() {
       challenge: 'Backup & Data Recovery',
       description: 'Infected or Clean',
       icon: HardDrive,
+      linkedin:
+        'https://www.linkedin.com/posts/rouamba-daniel-a24318294_cybersecurity-backupawareness-datarecovery-share-7444885361589137409-GdGa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEc88LwB0-eraKyRnqR9NUivTPsa0PCWTvk',
+      youtube: 'https://youtu.be/zN6unAfiYWo',
     },
   ];
 
