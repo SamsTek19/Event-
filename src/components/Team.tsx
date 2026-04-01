@@ -113,6 +113,9 @@ export default function Team() {
       challenge: 'Identity & Privacy Protection',
       description: 'How Exposed Are You?',
       icon: Eye,
+      linkedin:
+        'https://www.linkedin.com/posts/patrick-azise-ere-237a1b360_dont-be-the-next-victim-cybercrime-awareness-activity-7444887421520871425-jaeN?utm_source=share&utm_medium=member_ios&rcm=ACoAAFnaFIsBYtFktgQPSiN3WeK-SMaACmHu3pU',
+      youtube: 'https://youtu.be/Jc2SnIz6EIc?si=cjw4y3p_JzzCJfoo',
     },
     {
       name: 'Rouamba Daniel',
